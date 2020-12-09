@@ -1,15 +1,23 @@
 import React, {Fragment, useState} from 'react'
-const SortComponent = (props) =>{
+const SortComponent = ({launch_date_unix}) =>{
 
-  // const [date, setDate] = useState(props)
+  const [date, setDate] = useState(launch_date_unix);
 
-  // const sortByDate =()=> {
-  //   const sorted = date.sort((a,b)=>{
-  //     return b.launch_date_utc - a.launch_date_utc;
-  //   });
-  //   setDate(sortByDate);
-  //   alert(sorted[0].launch_date_unix);
-  // }
+  // const sortByDate = (date) =>{
+  //   let length = date.length;
+
+  //   for(index = 0; index < length; ++index) {
+  //     for (number = 0; number < length; ++number) {
+  //       if (date[number] > date[number + 1]) {
+  //         let temp = date[number];
+  //         date[number] = date[number + 1];
+  //         date[number + 1] = temp;
+  //       }
+  //       }
+  //     }
+  //     return date;
+  //   }
+  //   console.log(sortByDate)
   
 
     return (
@@ -26,18 +34,12 @@ const SortComponent = (props) =>{
 export default SortComponent;
 
 
-//use as base for sort function need to get hold of date order >2006 <2020
-// const bubbleSort = (array) => {
-//   let length = array.length;
 
-//   for (index = 0; index < length; ++index) {
-//     for (number = 0; number < length; ++number) {
-//       if (array[number] > array[number + 1]) {
-//         let temp = array[number];
-//         array[number] = array[number + 1];
-//         array[number + 1] = temp;
-//       }
-//     }
-//   }
-//   return array;
-// };
+
+// const sortByDate =()=> {
+  //   const sorted = date.sort((a,b)=>{
+  //     return b.launch_date_utc - a.launch_date_utc;
+  //   });
+  //   setDate(sortByDate);
+  //   alert(sorted[0].launch_date_unix);
+  // }

@@ -1,4 +1,4 @@
-import './App.css';
+import "./stylesheet.scss";
 import React,{Fragment} from 'react'
 import AppContainer from './containers/AppContainer'
 // import NavBar from '../src/components/NavBar'

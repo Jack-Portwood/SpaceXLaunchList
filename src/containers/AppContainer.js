@@ -25,16 +25,19 @@ const AppContainer = () =>{
     
 
     return (
+      <Fragment>
+      <NavBar/>
       <div className="mainContainer">
-        <div className="rocketImage">
-        <NavBar/>
-        <h2>Hello from the AppContainer</h2>
-        {fetchedData?<FilterComponent APIData={fetchedData}/>: <p>"Loading..."</p>}
-        {fetchedData?<SortComponent APIData={fetchedData}/>: <p>"Loading..."</p>}
-        {fetchedData?<ListComponent APIData={fetchedData}/>: <p>"Loading..."</p>}
+        <div className="rocketImage"></div>
+          {fetchedData?<ListComponent APIData={fetchedData}/>: <p>"Loading..."</p>}
+
+
+        <FilterComponent APIData={fetchedData}/>
+        <SortComponent />
         
+      
       </div>
-      </div>
+      </Fragment>
     );
 }
 

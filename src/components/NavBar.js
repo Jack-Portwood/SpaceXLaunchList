@@ -1,13 +1,12 @@
 import React from 'react';
-import image1 from "../assets/spacex-logo";
-import image2 from "../assets/spacex-logo";
+import image1 from '../assets/spacex-logo.png'
 
-const NavBar = ()=>{ 
+const NavBar = () => { 
 
     return (
       <header className="navBar">
         <img alt="spaceX logo" className="logo" src={image1} />
-        <img alt="refresh" className="refresh" src={image2} />
+        <p className="logoText">Launches</p>
       </header>
     );
 

@@ -1,6 +1,11 @@
 import React, { Fragment } from "react";
+import ListItem from "./ListItem";
 
 const ListComponent = (props) => {
+
+
+
+
   return (
     <div className="listComponent">
       <h5> Hello from the ListComponent</h5>
@@ -12,6 +17,7 @@ const ListComponent = (props) => {
           <li>Rocket:{item.rocket.rocket_name}</li>
         </ul>
       ))}
+      <ListItem bananna={props} />
     </div>
   );
 };
@@ -19,3 +25,11 @@ const ListComponent = (props) => {
 export default ListComponent;
 
 // something like this to render final
+//see scroller pass mapped item to <list/>
+
+//  const listData = props.APIData.map(item =>{ 
+//   return(
+//   <p>{item.misson_name}</p>
+// )})
+
+// {listData}

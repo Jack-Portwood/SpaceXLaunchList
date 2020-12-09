@@ -1,6 +1,10 @@
+import React from 'react';
 
-const ListItem = () => {
+const ListItem = ({mission_name}) => {
     return(
-        <h4> hello from the list itm</h4>
+        <p>
+        </p>
     )
 }
+
+export default ListItem;

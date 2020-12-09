@@ -1,5 +1,6 @@
 import React, {Fragment, useState} from 'react';
 import SortComponent from '../components/SortComponent';
+import FilterComponent from '../components/FilterComponent';
 
 const DataContainer = (props) =>{
 

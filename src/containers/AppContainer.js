@@ -1,4 +1,5 @@
 import React, {Fragment, useState, useEffect} from 'react';
+import FilterComponent from '../components/FilterComponent';
 import DataContainer from './DataContainer';
 
 const AppContainer = () =>{
@@ -25,6 +26,7 @@ const AppContainer = () =>{
       <Fragment>
         <h2>Hello from the AppContainer</h2>
         {fetchedData?<DataContainer APIData={fetchedData}/>: <p>"Loading..."</p>}
+        <FilterComponent APIData={fetchedData}/>
         
 
       </Fragment>

@@ -1,24 +1,24 @@
 import React, {Fragment, useState} from 'react'
 const SortComponent = (props) =>{
 
-  const [date, setDate] = useState(props)
+  // const [date, setDate] = useState(props)
 
-  const sortByDate =()=> {
-    const sorted = date.sort((a,b)=>{
-      return b.launch_date_utc - a.launch_date_utc;
-    });
-    setDate(sortByDate);
-    alert(sorted[0].launch_date_unix);
-  }
+  // const sortByDate =()=> {
+  //   const sorted = date.sort((a,b)=>{
+  //     return b.launch_date_utc - a.launch_date_utc;
+  //   });
+  //   setDate(sortByDate);
+  //   alert(sorted[0].launch_date_unix);
+  // }
   
 
     return (
       <Fragment>
         <h4>Hello from the SortComponent</h4>
-        {props.APIData.map((luanch, index) => {
+        {/* {props.APIData.map((luanch, index) => {
           return <p key={index}>{luanch.mission_name}, {luanch.launch_date_utc}</p>
         })}
-        <div onclick={sortByDate}> sort</div>
+        <div onclick={sortByDate}> sort</div> */}
       </Fragment>
     );
 }

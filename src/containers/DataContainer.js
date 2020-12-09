@@ -1,22 +1,21 @@
-import React, {Fragment, useState} from 'react';
-import SortComponent from '../components/SortComponent';
-import FilterComponent from '../components/FilterComponent';
+// import React, {Fragment, useState} from 'react';
+// import SortComponent from '../components/SortComponent';
+// import FilterComponent from '../components/FilterComponent';
 
-const DataContainer = (props) =>{
+// const DataContainer = (props) =>{
 
-// mybe use spread operator 
+// // mybe use spread operator 
 
         
          
-  return (
-    <Fragment>
-        
-      <h3> Hello from DataContainer</h3>
-      <SortComponent modData={props} />
-    </Fragment>
-  );
-};
+//   return (
+//     <Fragment>
+//         <h3> Hello from DataContainer</h3>
+//         <SortComponent modData={props} />
+//     </Fragment>
+//   );
+// };
 
-export default DataContainer;
+// export default DataContainer;
 
 

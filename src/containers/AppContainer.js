@@ -1,6 +1,7 @@
 import React, {Fragment, useState, useEffect} from 'react';
 import FilterComponent from '../components/FilterComponent';
 import SortComponent from '../components/SortComponent';
+import ListComponent from '../components/ListComponent'
 import NavBar from '../components/NavBar'
 
 const AppContainer = () =>{
@@ -24,14 +25,16 @@ const AppContainer = () =>{
     
 
     return (
-      <Fragment>
+      <div className="mainContainer">
+        <div className="rocketImage">
         <NavBar/>
         <h2>Hello from the AppContainer</h2>
         {fetchedData?<FilterComponent APIData={fetchedData}/>: <p>"Loading..."</p>}
         {fetchedData?<SortComponent APIData={fetchedData}/>: <p>"Loading..."</p>}
+        {fetchedData?<ListComponent APIData={fetchedData}/>: <p>"Loading..."</p>}
         
-
-      </Fragment>
+      </div>
+      </div>
     );
 }
 

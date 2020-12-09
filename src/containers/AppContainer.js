@@ -1,6 +1,7 @@
 import React, {Fragment, useState, useEffect} from 'react';
 import FilterComponent from '../components/FilterComponent';
-import DataContainer from './DataContainer';
+import SortComponent from '../components/SortComponent';
+import NavBar from '../components/NavBar'
 
 const AppContainer = () =>{
 
@@ -24,9 +25,10 @@ const AppContainer = () =>{
 
     return (
       <Fragment>
+        <NavBar/>
         <h2>Hello from the AppContainer</h2>
-        {fetchedData?<DataContainer APIData={fetchedData}/>: <p>"Loading..."</p>}
-        <FilterComponent APIData={fetchedData}/>
+        {fetchedData?<FilterComponent APIData={fetchedData}/>: <p>"Loading..."</p>}
+        {fetchedData?<SortComponent APIData={fetchedData}/>: <p>"Loading..."</p>}
         
 
       </Fragment>

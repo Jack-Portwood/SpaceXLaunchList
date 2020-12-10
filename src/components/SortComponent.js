@@ -1,7 +1,7 @@
 import React, {Fragment, useState} from 'react'
 const SortComponent = ({launch_date_unix}) =>{
 
-  const [date, setDate] = useState(launch_date_unix);
+  // const [date, setDate] = useState(launch_date_unix);
 
   // const sortByDate = (date) =>{
   //   let length = date.length;

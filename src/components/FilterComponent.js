@@ -1,19 +1,36 @@
-import React, { Fragment, useState } from "react";
+import React from "react";
+import Options from "./Options";
 
-const FilterComponent = (props) => {
-  return (
-    <Fragment>
-      <h4>Hello from the FilterComponent</h4>
+const FilterComponent = ({fetchedData}) => {
+  const allYears = []
 
-      {/* {props.APIData.filter((year) => year.launch_year === "2019").map(
-        (filteredYear) => (
-          <ul>
-            <li>{filteredYear.mission_name}</li>
-            <li>{filteredYear.launch_year}</li>
-          </ul>
+  const items = [...fetchedData].map((item) => {
+    if (!allYears.includes(item.launch_year)) {
+      allYears.push(item.launch_year)
+      return( <Options item={item.launch_year}/>
         )
-      )} */}
-    </Fragment>
+    } 
+    else {
+      return allYears.push(item.launch_year)
+    }
+  });
+
+  return (
+    <select className="year-filter-btn">
+      <option>Filter by year</option>
+      {items}
+    </select>
   );
 };
 export default FilterComponent;
+
+// {
+//   props.APIData.filter((year) => year.launch_year === "USERINPUT").map(
+//     (filteredYear) => (
+//       <ul>
+//         <li>{filteredYear.mission_name}</li>
+//         <li>{filteredYear.launch_year}</li>
+//       </ul>
+//     )
+//   );
+// }

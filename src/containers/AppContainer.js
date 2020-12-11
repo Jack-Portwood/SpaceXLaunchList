@@ -6,10 +6,9 @@ import NavBar from "../components/NavBar";
 
 const AppContainer = () => {
   const [fetchedData, setFetchedData] = useState("");
-  const [hasError, setError] = useState("");
-  const [sortDate, setSortDate] = useState("");
+  const [error, setError]= useState("")
 
-  const fetchedLaunchData = (url) => {
+  const fetchedLaunchData = async (url) => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -17,15 +16,36 @@ const AppContainer = () => {
       })
       .catch((err) => setError(err));
   };
+  
 
   useEffect(() => {
-    fetchedLaunchData("https://api.spacexdata.com/v3/launches");
+    fetchedLaunchData("https://api.spacexdata.com/v3/launches")
+    // .then(filterByYears(fetchedData))
+    // .then(console.log("Hello"));
   }, []);
+
+
+  // const filterByYears = (launches) => {
+  //   const years = [];
+
+  //   launches.forEach(launches =>{
+  //     if (!years.includes(launches.launch_year)){
+  //       years.push(launches.launch_year)
+  //     }
+  //   })
+  //    console.log(years)
+  //    return years;
+
+  // }
+  
+      
+
 
   //  const date = fetchedData.launch_date.unix;
 
-  // const sortByDate = () => {
-  //   let length = date.length;
+  // const sortByDate = (ordered) => {
+  // const sorted = []
+  //   let length = ordered.length;
   //   for (index = 0; index < length; ++index) {
   //     for (number = 0; number < length; ++number) {
   //       if (date[number] > date[number + 1]) {
@@ -43,16 +63,19 @@ const AppContainer = () => {
   return (
     <Fragment>
       <NavBar />
+      {/* <button onClick={() => filterByYears(fetchedData)}></button> */}
+
       <div className="mainContainer">
         <div className="rocketImage"></div>
+        <FilterComponent fetchedData={fetchedData} />
+
         {fetchedData ? (
           <ListComponent APIData={fetchedData} />
         ) : (
           <p>"Loading..."</p>
         )}
 
-        <FilterComponent APIData={fetchedData} />
-        {/* <SortComponent sortByDate={this.sortByDate} /> */}
+        <SortComponent />
       </div>
     </Fragment>
   );

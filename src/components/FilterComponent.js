@@ -1,25 +1,27 @@
-import React from "react";
+import React, { Fragment } from "react";
+import DataContainer from "../containers/DataContainer";
 import Options from "./Options";
 
-const FilterComponent = ({fetchedData}) => {
-  const allYears = []
+const FilterComponent = ({ fetchedData }) => {
+  const allYears = [];
 
-  const items = [...fetchedData].map((item) => {
+  const items = [...fetchedData].map((item, index) => {
     if (!allYears.includes(item.launch_year)) {
-      allYears.push(item.launch_year)
-      return( <Options item={item.launch_year}/>
-        )
-    } 
-    else {
-      return allYears.push(item.launch_year)
+      allYears.push(item.launch_year);
+      return <Options key={index} item={item.launch_year} />;
+    } else {
+      return allYears.push(item.launch_year);
     }
   });
 
   return (
-    <select className="year-filter-btn">
-      <option>Filter by year</option>
-      {items}
-    </select>
+    <Fragment>
+      <select className="year-filter-btn">
+        <option>Filter by Year</option>
+        {items}
+      </select>
+      <DataContainer fetchedData={fetchedData} />
+    </Fragment>
   );
 };
 export default FilterComponent;
@@ -33,4 +35,5 @@ export default FilterComponent;
 //       </ul>
 //     )
 //   );
+
 // }

@@ -1,15 +1,14 @@
-import React, { Fragment } from "react";
+import React from "react";
 import ListItem from "./ListItem";
 
-const ListComponent = (props) => {
-  
-  const listData = props.APIData.map((item, index) => {
-    return <ListItem key={index} item={item} />;
+const ListComponent = ({ fetchedData }) => {
+  const listData = [...fetchedData].map((item) => {
+    return <ListItem item={item} />;
   });
 
   return (
     <div className="listComponent">
-
+      <div className="btnfil"></div>
       {listData}
     </div>
   );

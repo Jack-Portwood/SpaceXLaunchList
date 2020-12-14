@@ -1,21 +1,12 @@
-// import React, {Fragment, useState} from 'react';
-// import SortComponent from '../components/SortComponent';
-// import FilterComponent from '../components/FilterComponent';
+import React, { Fragment, useState } from "react";
+import ListComponent from "../components/ListComponent";
 
-// const DataContainer = (props) =>{
+const DataContainer = ({ fetchedData }) => {
+  return (
+    <Fragment>
+      <ListComponent fetchedData={fetchedData} />
+    </Fragment>
+  );
+};
 
-// // mybe use spread operator 
-
-        
-         
-//   return (
-//     <Fragment>
-//         <h3> Hello from DataContainer</h3>
-//         <SortComponent modData={props} />
-//     </Fragment>
-//   );
-// };
-
-// export default DataContainer;
-
-
+export default DataContainer;

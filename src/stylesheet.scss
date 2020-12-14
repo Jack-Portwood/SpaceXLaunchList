@@ -48,65 +48,142 @@ $font-family: "Brandon Grotesque", Arial, Helvetica, sans-serif;
 }
 
 .navBar {
-  display: inline-flex;
-  align-items: baseline;
   width: 100vw;
   height: 10vh;
-  // border: solid 1px red;
+  border: solid 1px red;
+}
+.logoText-con {
+  display: inline-flex;
+  align-items: baseline;
 }
 
 .logo {
   width: 16vw;
   height: 3vh;
-  // border: solid purple 1px;
+  border: solid purple 1px;
 }
 
 .logoText {
   color: $font-color;
   font-family: $font-family;
   font-size: 3vh;
+  margin: 0vh;
+
   // border: 1px solid teal;
 }
 
-// .refresh {
-//   width: 16vw;
-//   height: 3vh;
-//   border: $primary-blue solid;
+// .refresh-btn {
+//   border: chartreuse solid 1px;
 // }
 
 .mainContainer {
   display: inline-flex;
-  justify-content: baseline;
+  align-items: center ;
+  
   border: solid 1px rgb(81, 255, 0);
+}
+.rocketImage-container {
+  height: 100vh;
+  width: 50vw;
+  border: solid 1px chartreuse;
 }
 
 .rocketImage {
   height: 100vh;
-  width: 60vw;
+  width: 45vw;
   background-image: url("./assets/img/launch-home.png");
   background-repeat: no-repeat;
   border: solid 1px orangered;
+  margin-left: 1vw;
 }
 
+//--------------------------------------
 .listComponent {
-  height: 90vh;
-  width: 40vw;
+  height: 100vh;
+  width: 50vw;
   border: solid 1px rgb(4, 0, 255);
+  overflow: scroll;
 }
 
-.listItem{
-  height: 13vh;
-  width: 20vw;
+.listItem {
+  display: inline-flex;
+  height: 6vh;
+  width: 40vw;
+  border-radius: 10px;
+  box-shadow: 1px 2px 15px $font-color;
+  margin-bottom: 3vh;
+  margin-left: 1vw;
+
   border: cyan solid 1px;
-
 }
-.li{
+
+.li {
   list-style: none;
 }
 
-.year-filter-btn{
-  width:30px;
-  height:20px;
-  background-color: lightblue;
+.item-right {
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
 
+  height: 5vh;
+  width: 40vw;
+  font-size: 3vh;
+  font-family: $font-family, bold;
+  color: $font-color;
+  border: red 1px solid;
+  margin-top: 1vh;
+}
+.flight-No {
+  border: red 1px solid;
+  height: 4vh;
+  width: 5vh;
+}
+
+.mission-name {
+  border: green 1px solid;
+  height: 4vh;
+  width: 40vw;
+  text-align: left;
+  margin-left: 3vw;
+}
+
+.item-left {
+  display: inline-flex;
+  flex-direction: column;
+
+  align-items: left;
+  height: 5vh;
+  width: 10vw;
+  font-family: $font-family;
+  color: $font-color;
+  border: blue 1px solid;
+}
+
+.launch-year {
+  border: orange 1px solid;
+  height: 2vh;
+  width: 7vw;
+
+  font-size: 1vh;
+}
+
+.rocket-name {
+  border: brown 1px solid;
+  height: 2vh;
+  width: 7vw;
+  font-size: 2vh;
+}
+
+.year-filter-btn {
+  width: 7vw;
+  height: 3vh;
+  background-color: $primary-blue;
+  font-family: $font-family;
+  color: whitesmoke;
+}
+
+.btnfil {
+  margin-left: 30vw;
+  margin-bottom: 1vh;
 }

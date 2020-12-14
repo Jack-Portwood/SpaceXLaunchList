@@ -43,3 +43,22 @@ export default SortComponent;
   //   setDate(sortByDate);
   //   alert(sorted[0].launch_date_unix);
   // }
+
+    //  const date = fetchedData.launch_date.unix;
+
+  // const sortByDate = (ordered) => {
+  // const sorted = []
+  //   let length = ordered.length;
+  //   for (index = 0; index < length; ++index) {
+  //     for (number = 0; number < length; ++number) {
+  //       if (date[number] > date[number + 1]) {
+  //         let temp = date[number];
+  //         date[number] = date[number + 1];
+  //         date[number + 1] = temp;
+  //       }
+  //     }
+  //   }
+  //   setSortDate(date)
+  //   return date;
+
+  // };

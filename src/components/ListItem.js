@@ -5,10 +5,15 @@ const ListItem = ({ item }) => {
     <div className="listItem">
       <li className="li">
         <article>
-            <p>#{item.flight_number}</p>
-          <p>{item.mission_name}</p>
-          <p>{item.launch_year}</p>
-          <p>{item.rocket.rocket_name}</p>
+          <div className="item-right">
+            <div className="flight-No">#{item.flight_number}</div>
+            <div className="mission-name">{item.mission_name}</div>
+
+            <div className="item-left">
+              <div className="launch-year">14/03/1990</div>
+              <div className="rocket-name">{item.rocket.rocket_name}</div>
+            </div>
+          </div>
         </article>
       </li>
     </div>
